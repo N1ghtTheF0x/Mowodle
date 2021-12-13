@@ -1,7 +1,11 @@
 {
-    "extends": "./tsconfig.json",
     "compilerOptions": {
-        "jsx": "preserve"
+        "module": "commonjs",
+        "outDir": "./dist",
+        "target": "esnext",
+        "strictFunctionTypes": true,
+        "moduleResolution": "node"
     },
-    "exclude": ["src/www"]
+    "exclude": ["src/www","node_modules","**/node_modules/*"],
+    "include": ["src"]
 }

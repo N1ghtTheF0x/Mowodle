@@ -6,6 +6,8 @@ const path = require("path")
 const webpack_config =
 {
     entry: "./src/www/index.tsx",
+    mode: process.env.WEBPACK_MODE,
+    devtool: "inline-source-map",
     module:
     {
         rules:
@@ -13,7 +15,15 @@ const webpack_config =
             {
                 test: /\.tsx?$/,
                 loader: "ts-loader",
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                options:
+                {
+                    configFile: "tsconfig.client.json"
+                }
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader","css-loader"]
             }
         ]
     },
@@ -24,6 +34,16 @@ const webpack_config =
     output:
     {
         filename: "sauce.js",
-        path: path.resolve(__dirname,"dist","www")
-    }
+        path: path.resolve(__dirname,"dist")
+    },
+    plugins:[
+        new webpack.DefinePlugin({
+            "process.env":
+            {
+                WEBPACK_MODE: JSON.stringify(process.env.WEBPACK_MODE)
+            }
+        })
+    ]
 }
+
+module.exports = webpack_config
