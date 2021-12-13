@@ -1,0 +1,48 @@
+{
+  "name": "mowodle",
+  "version": "1.0.0",
+  "description": "Moodle, but better",
+  "keywords": [
+    "Moodle",
+    "Express",
+    "Webpack",
+    "BWS",
+    "TypeScript"
+  ],
+  "homepage": "https://github.com/N1ghtTheF0x/Mowodle#readme",
+  "bugs": {
+    "url": "https://github.com/N1ghtTheF0x/Mowodle/issues",
+    "email": "kilo.night.prower@gmail.com"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "node dist/test/test.js",
+    "buildDev": "",
+    "buildProd": "",
+    "start": "",
+    "tunnel": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N1ghtTheF0x/Mowodle.git"
+  },
+  "author": "N1gthTheF0x",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/localtunnel": "^2.0.1",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "cross-env": "^7.0.3",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.3",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "localtunnel": "^2.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
