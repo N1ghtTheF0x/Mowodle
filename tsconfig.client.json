@@ -1,14 +1,15 @@
 {
-    "extends": "./tsconfig.json",
     "compilerOptions": {
-        "jsx": "react",
+        "strictFunctionTypes": true,
+        "jsx": "react-jsx",
         "outDir": "./dist/www/",
         "noImplicitAny": true,
         "module": "es6",
         "target": "es5",
         "allowJs": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "sourceMap": true
     },
-    "exclude": ["src"],
+    "exclude": ["node_modules","**/node_modules/*"],
     "include": ["src/www"]
 }

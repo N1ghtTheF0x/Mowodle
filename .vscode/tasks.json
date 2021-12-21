@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "buildDev",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Build Dev",
+			"detail": "npm run buildServer && npm run buildClientDev"
+		}
+	]
+}
