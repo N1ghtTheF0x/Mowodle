@@ -1,7 +1,9 @@
 {
     "extends": "./tsconfig.json",
     "compilerOptions": {
-        "jsx": "preserve"
+        "jsx": "preserve",
+        "outDir": "./dist/",
+        "sourceMap": true
     },
     "exclude": ["src/www"]
 }

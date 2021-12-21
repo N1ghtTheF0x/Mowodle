@@ -2,7 +2,10 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "ESNext",
-        "strictFunctionTypes": true
+        "strictFunctionTypes": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "jsx": "react"
     },
     "exclude": [
         "node_modules",
