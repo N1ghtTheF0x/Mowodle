@@ -81,3 +81,4 @@ dist/**/*.js
 dist/**/*.js.map
 dist/**/*.html
 dist/**/*.ico
+davinci_result.json

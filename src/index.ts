@@ -1,20 +1,18 @@
-import express from "express"
-import { resolve } from "path"
-import { createServer } from "http"
-import { Server as ServerIO } from "socket.io"
+import Server from "./server";
+import localtunnel = require("localtunnel");
 
-const app = express()
-const server = createServer(app)
-const io = new ServerIO(server)
+const shouldTunnel = process.argv.includes("--tunnel") || process.argv.includes("-t")
 
-app.use(express.static(resolve(__dirname,"www")))
+const server: Server = new Server()
 
-io.on("connection",function(socket)
+if(shouldTunnel)
 {
-    console.info(`Socket ${socket.id} connected!`)
-})
-
-server.listen(8080,function()
+    localtunnel(8080,{subdomain:"mowodle"},function(err,tunnel)
+    {
+        server.start()
+    })
+}
+else
 {
-    console.info("Server online!")
-})
+    server.start()
+}
