@@ -1,14 +1,15 @@
 {
     "compilerOptions": {
         "strictFunctionTypes": true,
-        "jsx": "react-jsx",
+        "jsx": "preserve",
         "outDir": "./dist/www/",
         "noImplicitAny": true,
         "module": "es6",
         "target": "es5",
         "allowJs": true,
         "moduleResolution": "node",
-        "sourceMap": true
+        "sourceMap": true,
+        "rootDir": "src/www"
     },
     "exclude": ["node_modules","**/node_modules/*"],
     "include": ["src/www"]

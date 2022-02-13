@@ -27,7 +27,7 @@ const webpack_config =
         rules:
         [
             {
-                test: /\.tsx?$/,
+                test: /\.ts$/i,
                 loader: "ts-loader",
                 exclude: /node_modules/
             },
@@ -40,18 +40,22 @@ const webpack_config =
                 }
             },
             {
-                test: /\.(png|jpg|jpeg|svg)$/,
+                test: /\.(png|jpg|jpeg|svg)$/i,
                 type: "asset/resource",
                 generator:
                 {
                     filename: "img/[hash][ext]"
                 }
+            },
+            {
+                test: /\.glsl$/i,
+                type: "asset/inline"
             }
         ]
     },
     resolve:
     {
-        extensions: [".tsx",".ts",".js"]
+        extensions: [".ts",".js"]
     },
     output:
     {
